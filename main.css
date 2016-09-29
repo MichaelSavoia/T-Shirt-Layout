@@ -5,13 +5,26 @@
 .container{
 	width: 33.3%;
 	display: inline-block;
-	margin: 5%;
+	padding: 5%;
 	font-family: 'helvetica'
+}
+
+.containerblue {
+	padding-right: 0;
+}
+
+.containerpink {
+	padding: 5% 2.5%;
+}
+
+.containerorange{
+	padding-left: 0;
 }
 
 .top{
 	border: solid #7bb5de 3px;
 	width: 100%;
+	position: relative;
 }
 
 img{
@@ -20,25 +33,38 @@ img{
 	padding-bottom: 0;
 }
 
+.shirt{
+	border-bottom: solid #7bb5de 3px;
+}
+
 .middle{
 	margin: 0;
 	text-align: center;
+	width: 100%;
 }
 
 .icon{
 	font-size: 110%;
 	display: inline-block;
-	width: 18.5%;
+	width: 20%;
 	padding: 3% 0;
-	padding-right: 1%;
+	margin-bottom: -1px;
+	color: #7bb5de;
+	border-right: solid #7bb5de 3px;
 }
 
-.icon3{
-	padding-right: 0%;
+.icon:hover, .rotate:hover{
+	background-color: #7bb5de;
+	color: white !important
+}
+
+.icon:nth-child(5){
+	border-right: 0 !important;
 }
 
 .bottom{
 	margin-top: 5%;
+	color: #7bb5de;
 }
 
 
@@ -53,25 +79,21 @@ h1{
 	font-weight: 700;
 }
 
-
-/*Blue color styles*/
-.blue .shirt{
+.rotate{
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 2%;
+	font-size: 120%;
+	color: #7bb5de;
+	border-left: solid #7bb5de 3px;
 	border-bottom: solid #7bb5de 3px;
 }
 
-.blue .icon{
-	color: #7bb5de;
-	border-right: solid #7bb5de 3px;
+.containerpink .icon4{
+	color: #D482AA;
 }
 
-.icon:nth-child(5){
-	border-right: 0 !important;
-}
-
-.blue .bottom{
-	color: #7bb5de;
-}
-
-.blue .top{
-	border: solid #7bb5de 3px;
+.containerorange .icon4{
+	color: #DCB07D;
 }
