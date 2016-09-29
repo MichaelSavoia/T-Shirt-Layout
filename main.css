@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+
+.container{
+	width: 33.3%;
+	display: inline-block;
+	margin: 5%;
+}
+
+.top{
+	border: solid #7bb5de 3px;
+	width: 100%;
+}
+
+img{
+	width: 100%;
+	padding: 5%;
+}
+
+.middle{
+	margin: 0;
+}
+
+{
+	display: inline;
+}
+
+
+.icon{
+	font-size: 110%;
+	display: inline-block;
+	width: 17%;
+	padding: 3% 9%;
+}
+
+.blue img{
+	border-bottom: solid #7bb5de 3px;
+}
+
+.blue .icon{
+	color: #7bb5de;
+}
+
+i{
+	text-align: center;
+}
+
