@@ -17,32 +17,30 @@
 img{
 	width: 100%;
 	padding: 5%;
+	padding-bottom: 0;
 }
 
 .middle{
 	margin: 0;
+	text-align: center;
 }
-
-{
-	display: inline;
-}
-
 
 .icon{
 	font-size: 110%;
 	display: inline-block;
-	width: 17%;
-	padding: 3% 9%;
+	width: 18.5%;
+	padding: 3% 0;
+	padding-right: 1%;
 }
 
-
-i{
-	text-align: center;
+.icon3{
+	padding-right: 0%;
 }
 
 .bottom{
 	margin-top: 5%;
 }
+
 
 p{
 	display: inline-block;
@@ -57,12 +55,17 @@ h1{
 
 
 /*Blue color styles*/
-.blue img{
+.blue .shirt{
 	border-bottom: solid #7bb5de 3px;
 }
 
 .blue .icon{
 	color: #7bb5de;
+	border-right: solid #7bb5de 3px;
+}
+
+.icon:nth-child(5){
+	border-right: 0 !important;
 }
 
 .blue .bottom{
