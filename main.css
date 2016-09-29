@@ -6,6 +6,7 @@
 	width: 33.3%;
 	display: inline-block;
 	margin: 5%;
+	font-family: 'helvetica'
 }
 
 .top{
@@ -34,6 +35,28 @@ img{
 	padding: 3% 9%;
 }
 
+
+i{
+	text-align: center;
+}
+
+.bottom{
+	margin-top: 5%;
+}
+
+p{
+	display: inline-block;
+	font-weight: 300;
+}
+
+h1{
+	display: inline-block;
+	float: right;
+	font-weight: 700;
+}
+
+
+/*Blue color styles*/
 .blue img{
 	border-bottom: solid #7bb5de 3px;
 }
@@ -42,7 +65,10 @@ img{
 	color: #7bb5de;
 }
 
-i{
-	text-align: center;
+.blue .bottom{
+	color: #7bb5de;
 }
 
+.blue .top{
+	border: solid #7bb5de 3px;
+}
