@@ -3,97 +3,278 @@
 }
 
 .container{
-	width: 33.3%;
+	margin: 5%;
+	font-family: 'helvetica';
 	display: inline-block;
-	padding: 5%;
-	font-family: 'helvetica'
+	width: 33.3%;
+	perspective: 1000;
+/*	z-index: 1;*/
 }
 
-.containerblue {
-	padding-right: 0;
+.containerblue{
+	border-color: #7bb5de;
+	color: #7bb5de;
 }
 
-.containerpink {
-	padding: 5% 2.5%;
+.containerblue .rotate{
+	border-color: #7bb5de;
+	color: #7bb5de;
 }
 
-.containerorange{
-	padding-left: 0;
+.containerblue .dropdown{
+	border-color: #7bb5de;
 }
 
 .top{
-	border: solid #7bb5de 3px;
+	border: 3px solid;
 	width: 100%;
 	position: relative;
-}
-
-img{
-	width: 100%;
-	padding: 5%;
-	padding-bottom: 0;
+	perspective: 1000;
 }
 
 .shirt{
-	border-bottom: solid #7bb5de 3px;
+	position: relative;
+	width: 100%;
+	transform-style: preserve-3d;
+	transition: all .8s linear;
 }
 
-.middle{
-	margin: 0;
-	text-align: center;
+.shirt:hover{
+	transform: rotateY(180deg);
+}
+
+.front img{
 	width: 100%;
+	padding: 10%;
+	position: relative;
+	z-index: 2;
+}
+
+.back img{
+	width: 100%;
+	padding: 10%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+
+.face{
+	position: absolute;
+	backface-visibility: hidden;
+}
+
+.face .back{
+	display: block;
+	transform: rotateY(180deg);
+	backface-visibility: : hidden;
+}
+
+.front{
+	transform: rotateY(180deg);
+	backface-visibility: hidden;
+}
+
+/*.shirt{
+	border-bottom: 3px solid;
+}*/
+
+.middle{
+	width: 100%;
+	border-top: 3px solid;
 }
 
 .icon{
-	font-size: 110%;
+	font-size: 1.5em;
 	display: inline-block;
 	width: 20%;
-	padding: 3% 0;
-	margin-bottom: -1px;
-	color: #7bb5de;
-	border-right: solid #7bb5de 3px;
+	text-align: center;
+	border-right: 3px solid;
+	padding: 5% 3%;
+	margin: -2px 0;
+	position: relative;
+}
+
+.icon2{
+	font-weight: bold;
+}
+
+.icon:nth-child(5){
+	border-right: none;
 }
 
 .icon:hover, .rotate:hover{
 	background-color: #7bb5de;
-	color: white !important
-}
-
-.icon:nth-child(5){
-	border-right: 0 !important;
+	border-color: #7bb5de;
+	color: white;
 }
 
 .bottom{
-	margin-top: 5%;
-	color: #7bb5de;
+	font-size: 1.5em;
+	display: block;
+	margin-top: 3%
 }
 
-
-p{
-	display: inline-block;
+.bottom span{
 	font-weight: 300;
 }
 
-h1{
-	display: inline-block;
-	float: right;
+.bottom h1{
 	font-weight: 700;
+	float: right;
 }
 
 .rotate{
+	font-size: 1.2em;
 	position: absolute;
 	top: 0;
 	right: 0;
-	padding: 2%;
-	font-size: 120%;
-	color: #7bb5de;
-	border-left: solid #7bb5de 3px;
-	border-bottom: solid #7bb5de 3px;
+	background-color: white;
+	border: none;
+	border-left: solid 3px;
+	border-bottom: solid 3px;
+	outline: none;
+	padding: 2% 3%;
 }
 
-.containerpink .icon4{
-	color: #D482AA;
+.dropdown{
+	display: none;
+	background-color: white !important;
+	border: 3px solid;
+	position: absolute;
+	left: -7px;
+	width: 76px;
+	/*opacity: 0;
+	transition: opacity 0.2s ease-in;*/
 }
 
-.containerorange .icon4{
-	color: #DCB07D;
+.size{
+	top: -217px;
+	height: auto;
+/*	width: 65px;*/
+}
+
+.size .dropdown-content{
+	width: 100%;
+}
+
+.xl {
+	padding: 5% 10%;
+}
+
+.l {
+	padding: 5% 15%;
+}
+
+.m{
+	padding: 5% 20%;
+}
+
+.s{
+	padding: 5% 25%;
+}
+
+.square{
+	top: -74px;
+	height: 76px;
+/*	width: 60px;*/
+}
+
+.square .dropdown-content{
+	width: 40%;
+	height: 40%;
+	display: inline-block;
+}
+
+.square1{
+	background-color: #7bb5de;
+	margin-right: 2.5%;
+	margin-top: 6%;
+	/*margin-bottom: 5%;*/
+}
+
+.square2{
+	background-color: #D482AA;
+	margin-left: 2.5%;
+	margin-top: 6%;
+	/*margin-bottom: 5%;*/
+}
+
+.square3{
+	background-color: #DCB07D;
+	margin-right: 2.5%;
+	/*margin-top: 2.5%;*/
+}
+
+.square4{
+	background-color: #77c16c;
+	margin-left: 2.5%;
+	/*margin-top: 2.5%;*/
+}
+
+.icon4:hover .dropdown{
+	display: block;
+/*	opacity: 1;*/
+}
+
+.icon3:hover .dropdown{
+	display: block;
+/*	opacity: 1;*/
+}
+
+@media screen and (max-width: 990px){
+	.container{
+		width: 100%;
+	}
+
+	.icon .rotate{
+		font-size: 4em;
+	}
+
+	.dropdown{
+		width: 210px;
+	}
+
+	.square{
+		height: 210px;
+		top: -210px;
+	}
+}
+
+@media screen and (max-width: 768px){
+	.dropdown{
+		width: 166px;
+	}
+
+	.icon, .rotate{
+		font-size: 3em;
+	}
+
+	.size{
+		top: -470px;
+	}
+
+	.square{
+		height: 166px;
+		top: -166px;
+	}
+}
+
+@media screen and (max-width: 425px){
+	.dropdown{
+			width: 95px;
+	}
+
+	.size{
+		top: -269px;
+	}
+
+	.square{
+		height: 95px;
+		top: -95px;
+	}
+
+	.icon, .rotate{
+		font-size: 1.6em;
+	}
 }
