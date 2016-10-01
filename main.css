@@ -57,6 +57,7 @@ body{
 /*Rotate button*/
 .rotate{
 	position: absolute;
+	color: #7bb5de;
 	top: 0;
 	right: 0;
 	font-size: 1.5em;
@@ -209,6 +210,7 @@ body{
 	width: 100%;
 	font-size: 1.5em;
 	padding-top: 3%;
+	color: #7bb5de;
 }
 
 .bottom h1{
@@ -216,8 +218,20 @@ body{
 	font-weight: 700;
 }
 
+.containerpink{
+	margin-left: -5%;
+	margin-right: -5%;
+}
+
 .containerblue{
 	color: #7bb5de;
+}
+
+.containerpink .icon4{
+	color: #D482AA;
+}
+.containerorange .icon4{
+	color: #DCB07D;
 }
 
 /*Changes display based on screen width*/
@@ -226,6 +240,10 @@ body{
 @media screen and (max-width: 990px){
 	.container{
 		width: 100%;
+	}
+
+	.containerpink{
+		margin: 0;
 	}
 
 	.rotate, .icon, .bottom{
