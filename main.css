@@ -92,8 +92,20 @@ body{
 	left: -15px;
 	z-index: 3;
 	visibility: hidden;
-	transition: margin-top 5s;
-	transition: visibility 5s;
+	// transition: margin-top 5s;
+	// transition: visibility 5s;
+}
+
+@keyframes opacityAnimation {
+	0% {
+		opacity:0;
+		margin-top:-50px;
+	}
+
+	100% {
+		opacity:1;
+		margin-top:0;
+	}
 }
 
 /*Dropdown squares*/
@@ -177,8 +189,8 @@ body{
 	left: 22px;
 	margin-top: -100px;
 	visibility: hidden;
-	transition: margin-top 10s ease-in-out;
-	transition: visibility 10s linear;
+	// transition: margin-top 10s ease-in-out;
+	// transition: visibility 10s linear;
 }
 
 .carrot1{
@@ -201,12 +213,14 @@ body{
 	/*display: block;*/
 	margin-top: 0px;
 	visibility: visible;
+	animation: opacityAnimation 1s 1;
 }
 
 .icon4:hover .carrot{
 	display: block;
 	margin-top: 0px;
 	visibility: visible;
+	animation: opacityAnimation 1s 1;
 }
 
 .icon3:hover .dropdown{
@@ -262,7 +276,7 @@ body{
 	color: #DCB07D;
 }
 
-Shirt Flip
+//Shirt Flip
 
 /*Changes display based on screen width*/
 
