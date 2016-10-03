@@ -8,8 +8,8 @@ body{
 
 /*General layout*/
 .container{
-	width: 36.3%;
-	padding: 5%;
+	width: 400px;
+	padding: 40px;
 	display: inline-block;
 	z-index: 1;
 }
@@ -22,7 +22,7 @@ body{
 }
 
 .shirt{
-	padding: 10%;
+	padding: 10px;
 }
 
 .shirt img{
@@ -41,13 +41,17 @@ body{
 .icon{
 	width: 20%;
 	display: inline-block;
-	font-size: 1.5em;
-	padding: 3%;
-	padding-top: 4%;
+	font-size: 1.5rem;
+	padding: 12px;
+	/*padding-top: 4px;*/
 	border-right: 3px solid #7bb5de;
 	color: #7bb5de;
 	margin-top: -3px;
 	position: relative;
+}
+
+.icon span{
+	font-weight: 700;
 }
 
 .icon:nth-child(5){
@@ -60,8 +64,8 @@ body{
 	color: #7bb5de;
 	top: 0;
 	right: 0;
-	font-size: 1.5em;
-	padding: 2% 3%;
+	font-size: 1.5rem;
+	padding: 5px 8px;
 	border-bottom: 3px solid #7bb5de;
 	border-left: 3px solid #7bb5de;
 }
@@ -69,7 +73,7 @@ body{
 /*Hover color change*/
 .icon:hover{
 		background-color: #7bb5de;
-		color: white;
+		color: white !important;
 	}
 
 .rotate:hover{
@@ -83,17 +87,18 @@ body{
 	background-color: white;
 	border: 3px solid #7bb5de;
 	width: 90px;
+	margin-top: -100px;
 	position: absolute;
-	top: 0;
-	left: 0;
-	margin-left: -14px;
+	left: -15px;
 	z-index: 3;
-	display: none;
+	visibility: hidden;
+	transition: margin-top 5s;
+	transition: visibility 5s;
 }
 
 /*Dropdown squares*/
 .dropdownsquare{
-	margin-top: -87px;
+	top: -87px;
 	height: 90px;
 }
 
@@ -134,7 +139,7 @@ body{
 /*Dropdown sizes*/
 .dropdownsize{
 	height: 185px;
-	top: -182px;
+	top: -183px;
 }
 
 .dropdown img{
@@ -169,41 +174,64 @@ body{
 .carrot{
 	position: absolute;
 	top: -1px;
-	left: 21px;
-	display: none;
+	left: 22px;
+	margin-top: -100px;
+	visibility: hidden;
+	transition: margin-top 10s ease-in-out;
+	transition: visibility 10s linear;
 }
 
 .carrot1{
-	border-top: 10px solid white;
-	border-right: 10px solid transparent;
-	border-left: 10px solid transparent;
+	border-top: 8px solid white;
+	border-right: 8px solid transparent;
+	border-left: 8px solid transparent;
 	z-index: 4;
 }
 
 .carrot2{
-	left: 16px;
-	border-top: 15px solid #7bb5de;
-	border-right: 15px solid transparent;
-	border-left: 15px solid transparent;
+	left: 17px;
+	border-top: 13px solid #7bb5de;
+	border-right: 13px solid transparent;
+	border-left: 13px solid transparent;
 	z-index: 2;
 }
 
 /*Dropdown menu hover*/
 .icon4:hover .dropdown{
-	display: block;
+	/*display: block;*/
+	margin-top: 0px;
+	visibility: visible;
 }
 
 .icon4:hover .carrot{
 	display: block;
+	margin-top: 0px;
+	visibility: visible;
 }
 
 .icon3:hover .dropdown{
 	display: block;
+	margin-top: 0px;
+	visibility: visible;
 }
 
 .icon3:hover .carrot{
 	display: block;
+	margin-top: 0px;
+	visibility: visible;
 }
+
+/*Dropdown menu animations*/
+/*.icon4:hover .dropdown{
+	margin-top: 0;
+	opacity: 100%;
+}*/
+
+.icon4:hover .carrot{
+	margin-top: 0;
+	opacity: 100%;
+}
+
 /*Bottom Section*/
 .bottom{
 	display: block;
@@ -234,86 +262,17 @@ body{
 	color: #DCB07D;
 }
 
+Shirt Flip
+
 /*Changes display based on screen width*/
 
 /*Smaller than laptop*/
 @media screen and (max-width: 990px){
 	.container{
-		width: 100%;
+		display: block;
 	}
 
 	.containerpink{
 		margin: 0;
 	}
-
-	.rotate, .icon, .bottom{
-		font-size: 2.5em;
-	}
-
-	.dropdown{
-		width: 200px;
-	}
-
-	.dropdownsquare{
-		height: 200px;
-		top: -110px;
-	}
-
-	.dropdownsize{
-		height: 400px;
-		top: -397px;
-	}
-
-	.carrot{
-		left: 74px;
-	}
-
-/*Tablet size*/
-@media screen and (max-width: 768px){
-	.icon, .rotate, .bottom{
-		font-size: 2.5em;
-	}
-
-	.dropdown{
-		width: 164px;
-	}
-
-	.dropdownsquare{
-		height: 164px;
-		top: -74px;
-	}
-
-	.dropdownsize{
-		height: 335px;
-		top: -332px;
-	}
-
-	.carrot{
-		left: 56px;
-	}
 }
-
-
-/*Phone size*/
-@media screen and (max-width: 450px){
-	.icon, .rotate, .bottom{
-		font-size: 1.5em;
-	}
-
-	.dropdown{
-		width: 90px;
-	}
-
-	.dropdownsquare{
-		height: 90px;
-		top: 0px;
-	}
-
-	.dropdownsize{
-		height: 185px;
-		top: -182px;
-	}
-
-	.carrot{
-		left: 20px;
-	}
