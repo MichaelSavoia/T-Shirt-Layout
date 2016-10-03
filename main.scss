@@ -1,0 +1,214 @@
+*{
+	box-sizing: border-box;
+}
+
+@import 'colors';
+
+@mixin square($size){
+	height: $size;
+	width: $size;
+}
+
+body{
+	border-color: $primary-color;
+	font-family: 'helvetica';
+}
+
+.container{
+	width: 330px;
+	padding: 30px;
+	display: inline-block;
+	z-index: 1;
+	perspective: 1000px;
+	@media screen and (max-width: 990px){
+		display: block;
+	}
+
+	.top{
+		border: 3px solid $primary-color;
+		position: relative;
+		height: auto;
+
+		.shirt{
+			transition: 0.8s;
+			transform-style: preserve-3d;
+
+			img{
+				width: 100%;
+				padding: 5%;
+			}
+
+			#front, #back{
+				backface-visibility: hidden;
+			}
+
+			#front{
+				transform: rotateY(0deg);
+				z-index: 2;
+			}
+
+			#back{
+				transform: rotateY(180deg);
+				position:absolute;
+				top: 0;
+				left: 0;
+			}
+
+			&:hover{
+				transform: rotateY(180deg);
+			}
+		}
+
+		.middle{
+			width: 100%;
+			border-top: 3px solid $primary-color;
+			text-align: center;
+
+			.icon{
+				width: 20%;
+				position: relative;
+				display: inline-block;
+				color: $primary-color;
+				padding: 3% 2%;
+				margin: -2px 0;
+				border-right: 3px solid $primary-color;
+				&:nth-child(5){
+					border-right: none;
+				}
+				font-size: 1.5rem;
+				span{
+					font-weight: 700;
+				}
+				&:hover{
+					background-color: $primary-color;
+					i, span{
+						color: $secondary-color;
+					}
+				}
+				.dropdown{
+					display: none;
+					margin-top: -100px;
+					position: absolute;
+					left: -10px;
+					width: 70px;
+					text-align: center;
+					opacity: 0;
+					background-color: $secondary-color;
+					border: 3px solid $primary-color;
+					z-index: 3;
+					animation: dropdownanimation 0.8s ease-out 1;
+				}
+
+				.dropdownsquare{
+					height: 70px;
+					top: -70px;
+						.square{
+							@include square(40%)
+							display: inline-block;
+						}
+
+						.square1{
+							background-color: $primary-color;
+							margin-top: 7%;
+							margin-right: 6%;
+						}
+
+						.square2{
+							background-color: $second-shirt-color;
+							margin-top: 7%;
+						}
+
+						.square3{
+							background-color: $third-shirt-color;
+							margin-top: 0%;
+							margin-right: 6%;
+						}
+
+						.square4{
+							background-color: $fourth-shirt-color;
+							margin-top: 0%;
+						}
+				}
+
+				.dropdownsize{
+					height: auto;
+					padding: 5%;
+					top: -187px;
+				}
+
+				.carrot{
+					color: $secondary-color;
+					border-top: 10px solid;
+					border-right: 10px solid transparent;
+					border-left: 10px solid transparent;
+					position: absolute;
+					top: -4px;
+					left: 15px;
+					margin-top: -100px;
+					opacity: 0;
+					z-index: 4;
+					animation: dropdownanimation 0.8s ease-out 1;
+				}
+
+				.carrot2{
+					color: $primary-color;
+					left: 10px;
+					border-top: 15px solid;
+					border-right: 15px solid transparent;
+					border-left: 15px solid transparent;
+					z-index:2;
+				}
+			}
+
+			.icon3, .icon4{
+				&:hover{
+					.dropdown{
+						display: block;
+						opacity: 1;
+						margin-top: 0;
+					}
+
+					.carrot{
+						display:block;
+						opacity: 1;
+						margin-top: 0;
+					}
+				}
+			}
+		}
+
+		.rotate{
+			position: absolute;
+			top: 0;
+			right: 0;
+			border-bottom: 3px solid $primary-color;
+			border-left: 3px solid $primary-color;
+			color: $primary-color;
+			padding: 2% 3%;
+			&:hover{
+				background-color: $primary-color;
+				i{
+					color: $secondary-color;
+				}
+			}
+		}
+	}
+
+	.bottom{
+		color: $primary-color;
+		padding-top: 4%;
+		font-size: 1.5rem;
+		h1{
+			float: right;
+			font-weight: 700;
+
+		}
+	}
+}
+
+@keyframes dropdownanimation{
+	0%{opacity: 0}
+	0%{margin-top: -100px}
+	100%{opacity: 1}
+	100%{margin-top: 0}
+}
