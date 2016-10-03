@@ -95,6 +95,7 @@ body {
           padding: 5%;
           top: -187px; }
         .container .top .middle .icon .carrot {
+          display: none;
           color: white;
           border-top: 10px solid;
           border-right: 10px solid transparent;
