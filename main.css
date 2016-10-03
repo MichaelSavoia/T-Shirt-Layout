@@ -12,6 +12,7 @@ body{
 	padding: 40px;
 	display: inline-block;
 	z-index: 1;
+	perspective: 1000px;
 }
 
 
@@ -19,6 +20,7 @@ body{
 .top{
 	border: 3px solid #7bb5de;
 	position: relative;
+	height: auto;
 }
 
 .shirt{
@@ -212,28 +214,28 @@ body{
 	/*display: block;*/
 	margin-top: 0px;
 	visibility: visible;
-	animation: DropdownAnimation 0.5s ease-in-out 1;
+	animation: DropdownAnimation 0.5s ease-out 1;
 }
 
 .icon4:hover .carrot{
 	display: block;
 	margin-top: 0px;
 	visibility: visible;
-	animation: DropdownAnimation 0.5s ease-in-out 1;
+	animation: DropdownAnimation 0.5s ease-out 1;
 }
 
 .icon3:hover .dropdown{
 	display: block;
 	margin-top: 0px;
 	visibility: visible;
-	animation: DropdownAnimation 0.5s ease-in-out 1;
+	animation: DropdownAnimation 0.5s ease-out 1;
 }
 
 .icon3:hover .carrot{
 	display: block;
 	margin-top: 0px;
 	visibility: visible;
-	animation: DropdownAnimation 0.5s ease-in-out 1;
+	animation: DropdownAnimation 0.5s ease-out 1;
 }
 
 /*Dropdown menu animations*/
@@ -277,7 +279,34 @@ body{
 	color: #DCB07D;
 }
 
-Shirt Flip
+/*Shirt Flip*/
+.shirt:hover{
+	transform: rotateY(180deg);
+}
+
+.shirt{
+	position: relative;
+	transition: .8s;
+	transform-style: preserve-3d;
+}
+
+#front, #back{
+	backface-visibility: hidden;
+/*	position: absolute;
+	top: 0;
+	left: 0;*/
+}
+
+#front{
+	transform: rotateY(0deg);
+}
+
+#back{
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: rotateY(180deg);
+}
 
 /*Changes display based on screen width*/
 
