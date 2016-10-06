@@ -93,7 +93,7 @@ body {
         .container .top .middle .icon .dropdownsize {
           height: auto;
           padding: 5%;
-          top: -187px; }
+          top: -193px; }
         .container .top .middle .icon .carrot {
           display: none;
           color: white;
@@ -146,13 +146,24 @@ body {
 
 .cart {
   position: fixed;
-  top: 450px;
-  left: 38px;
+  top: 38px;
+  right: 0;
+  margin-right: -270px;
   width: 270px;
   padding: 10px;
   height: auto;
   background-color: white;
-  border: 3px solid #7bb5de; }
+  border: 3px solid #7bb5de;
+  z-index: 50000; }
+  .cart #cartIcon {
+    position: absolute;
+    top: -3px;
+    left: -60px;
+    padding: 10px;
+    background-color: #7bb5de;
+    color: white; }
+    .cart #cartIcon i {
+      margin-right: 4px; }
   .cart .cartheader {
     display: block;
     color: #7bb5de;
@@ -163,17 +174,33 @@ body {
       font-size: 1rem;
       line-height: 0.5rem;
       display: inline-block; }
-    .cart .cartheader i {
-      font-size: 1rem;
-      display: inline-block;
-      float: right; }
+  .cart #items {
+    display: inline-block;
+    color: grey;
+    width: 100%;
+    margin: 0; }
+    .cart #items .item {
+      display: block;
+      line-height: 0; }
+      .cart #items .item .shirtName {
+        display: inline-block;
+        text-align: left;
+        float: left; }
+      .cart #items .item .shirtPrice {
+        display: inline-block;
+        float: right; }
   .cart .numbers {
     margin-top: -15px;
-    line-height: 1.4em;
+    line-height: 1.2em;
     width: 100%;
     color: grey;
-    text-align: right; }
-    .cart .numbers #total {
+    text-align: right;
+    display: block; }
+    .cart .numbers #taxBox {
+      margin-bottom: -15px;
+      margin-top: -5px; }
+    .cart .numbers #totalBox {
+      display: inline-block;
       float: right;
       width: 100%;
       border-top: 2px solid #7bb5de;
@@ -182,6 +209,25 @@ body {
 .active {
   background-color: #7bb5de !important;
   color: white !important; }
+
+.animateCartOpen {
+  animation: cartSlideOpen 0.3s linear 1;
+  margin-right: 0px; }
+
+.animateCartClose {
+  animation: cartSlideClose 0.3s linear 1; }
+
+@keyframes cartSlideOpen {
+  0% {
+    margin-right: -270px; }
+  100% {
+    margin-right: 0px; } }
+
+@keyframes cartSlideClose {
+  0% {
+    margin-right: 0px; }
+  100% {
+    margin-right: -270px; } }
 
 @keyframes dropdownanimation {
   0% {
