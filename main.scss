@@ -96,7 +96,7 @@ body{
 					background-color: $secondary-color;
 					border: 3px solid $primary-color;
 					z-index: 3;
-					animation: dropdownanimation 0.8s ease-out 1;
+					animation: dropdownanimation 0.5s ease-out 1;
 				}
 
 				.dropdownsquare{
@@ -148,7 +148,7 @@ body{
 					margin-top: -100px;
 					opacity: 0;
 					z-index: 4;
-					animation: dropdownanimation 0.8s ease-out 1;
+					animation: dropdownanimation 0.5s ease-out 1;
 				}
 
 				.carrot2{
@@ -201,10 +201,63 @@ body{
 		font-size: 1.5rem;
 		h1{
 			float: right;
+			font-size: 1.5rem;
 			font-weight: 700;
+			margin: 0;
 
 		}
 	}
+}
+
+.cart{
+	position: fixed;
+	top: 450px;
+	left: 38px;
+	width: 270px;
+	padding: 10px;
+	height: auto;
+	background-color: white;
+	border: 3px solid $primary-color;
+
+	.cartheader{
+		display: block;
+		color: $primary-color;
+		width: 100%;
+		padding-bottom: 5px;
+		border-bottom: 2px solid $primary-color;
+
+		#cart{
+			font-size: 1rem;
+			line-height: 0.5rem;
+			display: inline-block;
+		}
+
+		i{
+			font-size: 1rem;
+			display: inline-block;
+			float: right;
+		}
+	}
+
+	.numbers{
+		margin-top: -15px;
+		line-height: 1.4em;
+		width: 100%;
+		color: grey;
+		text-align: right;
+
+			#total{
+				float: right;
+				width: 100%;
+				border-top: 2px solid $primary-color;
+				padding-top: 5px;
+			}
+	}
+}
+
+.active{
+	background-color: $primary-color !important;
+	color: white !important;
 }
 
 @keyframes dropdownanimation{

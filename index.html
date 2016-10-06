@@ -3,7 +3,7 @@
 <head>
 	<title>T Shirt</title>
 	<link rel="stylesheet" type="text/css" href="reset.css">
-	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://use.fontawesome.com/5918b9f339.js"></script>
 </head>
@@ -45,7 +45,7 @@
 						</div>
 						<div class="carrot carrot1"></div>
 						<div class="carrot carrot2"></div>
-				</div><div class="icon icon5">
+				</div><div onClick="addToCart(29,'blue')" class="icon icon5" id="buttonblue">
 					<i class="fa fa-shopping-cart" aria-hidden="true"></i>
 				</div>
 			</div>
@@ -56,13 +56,13 @@
 		</div>
 		<!-- Name and price -->
 		<div class="bottom">
-			<span>Save my trees</span>
-			<h1>$29</h1>
+			<span id="nameB">Save my trees</span>
+			<h1 id="priceB">$29</h1>
 		</div>
 	</div>
 
 	<!-- Pink Shirt -->
-	<div class="container containerpink">
+	<div class="container containersecondshirt">
 		<div class="top">
 			<div class="shirt">
 				<img id="front" src="pinkshirt.png">
@@ -97,8 +97,8 @@
 						</div>
 						<div class="carrot carrot1"></div>
 						<div class="carrot carrot2"></div>
-				</div><div class="icon icon5">
-					<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+				</div><div class="icon icon5" id="buttonpink">
+					<i onClick="addToCart(19,'pink')" class="fa fa-shopping-cart" aria-hidden="true"></i>
 				</div>
 			</div>
 			<!-- rotate button -->
@@ -108,13 +108,13 @@
 		</div>
 		<!-- Name and price -->
 		<div class="bottom">
-			<span>Nature Lover</span>
-			<h1>$19</h1>
+			<span id="nameP">Nature Lover</span>
+			<h1 id="priceP">$19</h1>
 		</div>
 	</div>
 
 	<!-- Orange Shirt -->
-	<div class="container containerorange">
+	<div class="container containerthirdshirt">
 		<div class="top">
 			<div class="shirt">
 				<img id="front" src="orangeshirt.png">
@@ -150,7 +150,7 @@
 						</div>
 						<div class="carrot carrot1"></div>
 						<div class="carrot carrot2"></div>
-				</div><div class="icon icon5">
+				</div><div onClick="addToCart(39,'orange')" class="icon icon5" id="buttonorange">
 					<i class="fa fa-shopping-cart" aria-hidden="true"></i>
 				</div>
 			</div>
@@ -161,9 +161,24 @@
 		</div>
 		<!-- Name and price -->
 		<div class="bottom">
-			<span>Forrest walk</span>
-			<h1>$39</h1>
+			<span id="nameO">Forrest walk</span>
+			<h1 id="priceO">$39</h1>
 		</div>
 	</div>
+
+	<!-- shopping cart -->
+	<div class="cart">
+		<div class="cartheader">
+			<span id="cart">Shopping cart</span>
+			<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+		</div>
+		<div class="numbers">
+			<h3>Subtotal: $<span id="subtotal">0</span></h3>
+			<h3>Tax: $<span id="tax">0</span></h3>
+			<h3>Total $<span id="total">0</span></h3>
+		</div>
+	</div>
+
+	<script src="main.js" type="text/javascript"></script>
 </body>
 </html>
