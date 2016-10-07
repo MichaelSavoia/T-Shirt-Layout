@@ -258,15 +258,36 @@ body{
 			display: block;
 			line-height: 0;
 
+			#remove{
+				display: inline-block;
+				font-weight: 700;
+				color: red;
+				padding: 6px 3px;
+				padding-bottom: 7px;
+				border: 2px solid red;
+				margin-right: 10px;
+				&:hover{
+					background-color: red;
+					color: white;
+				}
+			}
+
 			.shirtName{
 				display: inline-block;
 				text-align: left;
-				float: left;
 			}
 
 			.shirtPrice{
 				display: inline-block;
 				float: right;
+			}
+
+			.time{
+				display: block;
+				text-align: right;
+				color: $primary-color;
+				font-size: 0.8rem;
+				clear: both;
 			}
 		}
 	}

@@ -182,13 +182,29 @@ body {
     .cart #items .item {
       display: block;
       line-height: 0; }
+      .cart #items .item #remove {
+        display: inline-block;
+        font-weight: 700;
+        color: red;
+        padding: 6px 3px;
+        padding-bottom: 7px;
+        border: 2px solid red;
+        margin-right: 10px; }
+        .cart #items .item #remove:hover {
+          background-color: red;
+          color: white; }
       .cart #items .item .shirtName {
         display: inline-block;
-        text-align: left;
-        float: left; }
+        text-align: left; }
       .cart #items .item .shirtPrice {
         display: inline-block;
         float: right; }
+      .cart #items .item .time {
+        display: block;
+        text-align: right;
+        color: #7bb5de;
+        font-size: 0.8rem;
+        clear: both; }
   .cart .numbers {
     margin-top: -15px;
     line-height: 1.2em;
